@@ -3,7 +3,7 @@ name: Issue Linker
 on:
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   issue_linker:
