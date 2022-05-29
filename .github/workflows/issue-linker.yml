@@ -12,4 +12,5 @@ jobs:
       - name: Issue Linker
         uses: gabrielluong/issue-linker@v1
         with:
+          section: "### GitHub Automation (Do not add anything below this line)"
           github-token: ${{ secrets.GITHUB_TOKEN }}
