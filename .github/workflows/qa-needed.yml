@@ -1,0 +1,17 @@
+name: QA Needed
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  qa_needed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: QA Needed
+        uses: gabrielluong/qa-needed@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          label: "eng:reopen-for-qa"
+          check: "- [X] **QA Needed**:"
