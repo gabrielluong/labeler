@@ -3,7 +3,7 @@ name: QA Needed
 on:
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   qa_needed:
@@ -14,4 +14,4 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           label: "eng:reopen-for-qa"
-          check: "- [X] **QA Needed**:"
+          check: "- [X] **QA Needed**"
