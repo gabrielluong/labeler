@@ -1,0 +1,17 @@
+name: Reopen for QA Needed
+
+on:
+  issues:
+    types:
+      - closed
+
+jobs:
+  reopen_qa_needed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reopen for QA Needed
+        uses: gabrielluong/reopen-for-qa-needed@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          reopen-label: "eng:reopen-for-qa"
+          qa-label: "eng:qa:needed"

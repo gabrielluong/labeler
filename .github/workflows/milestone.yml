@@ -8,9 +8,9 @@ on:
 jobs:
   milestone:
     runs-on: ubuntu-latest
-    if: github.actor == 'xyz'
+    if: github.actor == 'gabrielluong'
     steps:
       - name: Tag Milestone
-        uses: gabrielluong/milestone@v1
+        uses: gabrielluong/milestone@1.0.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}

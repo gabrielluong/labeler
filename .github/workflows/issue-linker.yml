@@ -12,5 +12,6 @@ jobs:
       - name: Issue Linker
         uses: gabrielluong/issue-linker@v1
         with:
-          section: "### GitHub Automation"
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          commit-regexp: "Issue #(\\d*)"
+          section: "### GitHub Automation"

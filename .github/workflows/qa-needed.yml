@@ -2,6 +2,7 @@ name: QA Needed
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened, edited, ready_for_review]
     branches:
       - master
 
@@ -14,4 +15,4 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           label: "eng:reopen-for-qa"
-          check: "- [X] **QA Needed**"
+          check-regexp: "- \\[([ xX]?)\\] \\*\\*QA Needed\\*\\*"
