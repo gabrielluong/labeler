@@ -13,5 +13,5 @@ jobs:
         uses: gabrielluong/issue-linker@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          commit-regexp: "Issue #(\\d*)"
+          commit-regexp: "#(\\d+)[,:-\\s]+"
           section: "### GitHub Automation"
