@@ -1,0 +1,17 @@
+name: Bugzilla Issue Linker
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited, ready_for_review]
+    branches:
+      - master
+
+jobs:
+  issue_linker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Issue Linker
+        uses: gabrielluong/bugzilla-linker@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          section: "### GitHub Automation"
