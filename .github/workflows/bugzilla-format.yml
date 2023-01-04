@@ -1,0 +1,16 @@
+name: Bugzilla Format
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, edited, ready_for_review]
+    branches:
+      - master
+
+jobs:
+  issue_linker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bugzilla Format
+        uses: gabrielluong/bugzilla-format@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
