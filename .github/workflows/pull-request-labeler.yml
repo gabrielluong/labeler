@@ -1,0 +1,20 @@
+name: Pull Request Labeler
+
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize, converted_to_draft, ready_for_review, review_requested]
+    branches:
+      - master
+  pull_request_review:
+    types: [submitted]
+    branches:
+      - master
+
+jobs:
+  pull_request_labeler:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull Request Labeler
+        uses: gabrielluong/pull-request-labeler@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
